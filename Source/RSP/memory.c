@@ -98,6 +98,7 @@ void SetJumpTable (DWORD End) {
 		End = 0x800;
 	}
 
+#pragma loop count min(512)
 	for (count = 0; count < End; count += 0x40) {
 		CRC += *(DWORD *)(RSPInfo.IMEM + count);		
 	}
@@ -159,6 +160,7 @@ void RSP_LFV_DMEM ( uint32_t Addr, int vect, int element ) {
 	Temp.HW[1] = *(RSPInfo.DMEM + (((Addr + ((0x10 - element) ^ 3) & 0xf)) & 0xFFF)) << 7;
 	Temp.HW[0] = *(RSPInfo.DMEM + (((Addr + ((0x4 - element) ^ 3) & 0xf)) & 0xFFF)) << 7;
 	
+#pragma loop count min(256)
 	for (count = element; count < (length + element); count ++ ){
 		RSP_Vect[vect].B[15 - count] = Temp.B[15 - count];
 	}

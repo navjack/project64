@@ -509,6 +509,7 @@ void RSP_Vector_VMUDL (void) {
 	UWORD32 temp;
 	VECTOR result = {0};
 
+#pragma ivdep
 	for (el = 0; el < 8; el ++ ) {
 		del = EleSpec[RSPOpC.rs].B[el];
 

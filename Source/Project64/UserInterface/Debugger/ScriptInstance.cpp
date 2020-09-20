@@ -1348,6 +1348,7 @@ duk_ret_t CScriptInstance::js_GetRDRAMBlock(duk_context* ctx)
 
     uint8_t* block = (uint8_t*)duk_push_buffer(ctx, size, false);
 
+#pragma loop count min(256)
     for (uint32_t i = 0; i < size; i++)
     {
         _this->m_Debugger->DebugLoad_VAddr(address + i, block[i]);
@@ -1409,6 +1410,8 @@ duk_ret_t CScriptInstance::js_GetRDRAMString(duk_context* ctx)
 
     uint8_t* str = (uint8_t*)malloc(len + 1);
 
+#pragma parallel
+#pragma loop count min(256)
     for (int i = 0; i < len; i++)
     {
         _this->m_Debugger->DebugLoad_VAddr(address + i, str[i]);
@@ -1460,6 +1463,8 @@ duk_ret_t CScriptInstance::js_GetROMString(duk_context* ctx)
 
     char* str = (char*)malloc(len + 1);
 
+#pragma parallel
+#pragma loop count min(1024)
     for (int i = 0; i < len; i++)
     {
         str[i] = rom[(address + i) ^ 3];

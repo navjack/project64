@@ -49,6 +49,7 @@
   <ItemDefinitionGroup>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DebugFull</GenerateDebugInformation>
     </Link>
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -64,6 +65,8 @@
       <RecognizeRestrictKeyword Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</RecognizeRestrictKeyword>
       <EnableAnsiAliasing Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableAnsiAliasing>
       <EnableMatrixMultiplyLibraryCall Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Yes</EnableMatrixMultiplyLibraryCall>
+      <EnableExpandedLineNumberInfo Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableExpandedLineNumberInfo>
+      <EnableExpandedLineNumberInfo Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableExpandedLineNumberInfo>
     </ClCompile>
     <PostBuildEvent>
       <Command>"$(OutDir)\JoinSettings.exe" -join "$(SolutionDir)Config\Cheats"  "$(SolutionDir)Config\Project64.cht"</Command>

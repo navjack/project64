@@ -1004,6 +1004,7 @@ LRESULT CDebugMemoryView::OnHxPaste(LPNMHDR lpNMHDR)
     else if (nmp->column == HX_COL_ASCII)
     {
         size_t length = strlen(text);
+#pragma ivdep
         for (size_t i = 0; i < length; i++)
         {
             SetByte(nmp->address + i, text[i]);

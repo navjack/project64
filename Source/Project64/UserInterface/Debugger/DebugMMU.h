@@ -44,6 +44,7 @@ public:
             uint8_t bytes[sizeof(T)];
         } buffer;
 
+#pragma forceinline recursive
         if (ReadVirtual(vaddr, sizeof(buffer), buffer.bytes) == sizeof(buffer))
         {
             value = ByteSwap<T>(buffer.word);

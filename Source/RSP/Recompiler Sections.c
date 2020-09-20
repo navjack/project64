@@ -818,15 +818,21 @@ void Compile_Section_000(void) {
 		AddConstToX86Reg(x86_ESP, 4);
 	}
 
+#pragma loop count min(64)
 	for (i = 0; i < Section_000_VMADN; i++) {
 		RSP_LW_IMEM(CompilePC + 0x04 + (i * 4), &vmadn.Hex);
+#pragma forceinline recursive
 		CPU_Message("  %X %s",CompilePC+0x04+(i*4),RSPOpcodeName(vmadn.Hex,CompilePC+0x04+(i*4)));
 
 		if (LogRDP){
 			char str[40];
+#pragma forceinline recursive
 			sprintf(str,"%X",CompilePC+0x04+(i*4));
+#pragma forceinline recursive
 			PushImm32(str,CompilePC+0x04+(i*4));
+#pragma forceinline recursive
 			Call_Direct(RDP_LogLoc,"RDP_LogLoc");
+#pragma forceinline recursive
 			AddConstToX86Reg(x86_ESP, 4);
 		}
 		

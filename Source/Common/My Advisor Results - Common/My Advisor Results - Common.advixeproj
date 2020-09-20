@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <connectionOption>localhost</connectionOption>
+ <rdmgr>
+  <timestamp type="u64_t">1600579362</timestamp>
+  <hostname>DESKTOP-8D3FVVA</hostname>
+  <os>windows</os>
+  <product>Intel® Advisor 2020 Update 2</product>
+  <buildNumber type="s32_t">606470</buildNumber>
+  <logicalCPUCount type="s32_t">20</logicalCPUCount>
+  <physicalCoreCount type="s32_t">10</physicalCoreCount>
+  <processorPackageCount type="s32_t">1</processorPackageCount>
+  <CPUFrequency type="s64_t">2800000000</CPUFrequency>
+  <CPUFamily type="s32_t">6</CPUFamily>
+  <CPUModel type="s32_t">165</CPUModel>
+  <CPUStepping type="s32_t">5</CPUStepping>
+  <CPUBrandName>Intel(R) Core(TM) i9-10900 CPU @ 2.80GHz</CPUBrandName>
+  <isa>avx2</isa>
+ </rdmgr>
+ <contextValues type="bag"/>
+ <All_Configurations-All_Platforms>
+  <target_settings>
+   <selected_workload>
+    <localhost>release</localhost>
+   </selected_workload>
+   <workloads>
+    <localhost>
+     <release type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>release</targetName>
+       <launch_app.app_to_launch>C:\Users\jackm\Documents\project64\bin\Release64\lib\Common.lib</launch_app.app_to_launch>
+       <launch_app.working_folder>C:\Users\jackm\Documents\project64\Source\Common</launch_app.working_folder>
+       <launch_app.app_parameters></launch_app.app_parameters>
+       <launch_app.environment>PATH=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020\windows\redist\intel64\compiler;%PATH%</launch_app.environment>
+       <launch_app.environment_prepend>PATH=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020\windows\redist\intel64\compiler;</launch_app.environment_prepend>
+       <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
+       <result_directory.path>C:\Users\jackm\Documents\project64\Source\Common\My Advisor Results - Common\r@@@{at}</result_directory.path>
+       <search_directories>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64\bin\Release64\lib\pdb</value>
+        </item>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64</value>
+        </item>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64\bin\Release64\pdb</value>
+        </item>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64\bin\Release\lib\pdb</value>
+        </item>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64\bin\Release\pdb</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\bin\Release64\lib</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64</value>
+        </item>
+        <item>
+         <value>bin=C:/Users\jackm\Documents\project64\Source\Common\$(VC_ExecutablePath_x64)</value>
+        </item>
+        <item>
+         <value>bin=C:/Users\jackm\Documents\project64\Source\Common\$(WindowsSDK_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/Users\jackm\Documents\project64\Source\Common\$(VS_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/Users\jackm\Documents\project64\Source\Common\$(MSBuild_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Team Tools\Static Analysis Tools\FxCop</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.2.254\windows\mpi\intel64\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Oracle\Java\javapath</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\system32</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\System32\Wbem</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\System32\WindowsPowerShell\v1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\System32\OpenSSH</value>
+        </item>
+        <item>
+         <value>bin=C:\ProgramData\chocolatey\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\PowerShell\7</value>
+        </item>
+        <item>
+         <value>bin=C:\Aldec\Active-HDL 10.1 64-bit\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Aldec\Active-HDL 9.1\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git\cmd</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git LFS</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\dotnet</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\Python\Python38\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\Python\Python38</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\Python\Python38-32\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\Python\Python38-32</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Microsoft\WindowsApps</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Keybase</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\GitHubDesktop\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\fahclient</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\CMake\bin</value>
+        </item>
+        <item>
+         <value>bin=N:\perforce\server</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\IPFS Desktop\resources\app.asar.unpacked\out\ipfs-on-path\scripts\bin-win</value>
+        </item>
+        <item>
+         <value>bin=C:\modeltech64_10.6d\win64</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\.dotnet\tools</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin64\RSP</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\bin\Release\lib</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin64\Input</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin\Input</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin\RSP</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin64\GFX</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin64\Audio</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\bin\Release64</value>
+        </item>
+       </search_directories>
+       <context>
+        <contextValue>
+         <id>auto_finalize</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>collectGpuOpenCl</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>dataLimit</id>
+         <value type="s32_t">500</value>
+        </contextValue>
+        <contextValue>
+         <id>gpuSamplingInterval</id>
+         <value type="double">1</value>
+        </contextValue>
+        <contextValue>
+         <id>gpu_profiling</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>interval</id>
+         <value type="s32_t">10</value>
+        </contextValue>
+        <contextValue>
+         <id>keepCaches</id>
+         <value>clear</value>
+        </contextValue>
+        <contextValue>
+         <id>mklUserMode</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>modules_switch</id>
+         <value>knob.modules_switch.exclude</value>
+        </contextValue>
+        <contextValue>
+         <id>mrte_mode</id>
+         <value>auto</value>
+        </contextValue>
+        <contextValue>
+         <id>openclSourceAsm</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>process_for_analysis</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>profilePython</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>profile_intel_perf_libs</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>spillAnalysis</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>stackStitching</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>stackwalk</id>
+         <value>offline</value>
+        </contextValue>
+        <contextValue>
+         <id>static_instruction_mix</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>support_multi_isa_binaries</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>release</value>
+        </contextValue>
+        <contextValue>
+         <id>type_opt</id>
+         <value>cpu:stack</value>
+        </contextValue>
+       </context>
+      </workload>
+     </release>
+     <tripcounts type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>tripcounts</targetName>
+       <launch_app.app_to_launch>C:\Users\jackm\Documents\project64\bin\Release64\lib\Common.lib</launch_app.app_to_launch>
+       <launch_app.working_folder>C:\Users\jackm\Documents\project64\Source\Common</launch_app.working_folder>
+       <launch_app.app_parameters></launch_app.app_parameters>
+       <launch_app.environment>PATH=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020\windows\redist\intel64\compiler;%PATH%</launch_app.environment>
+       <launch_app.environment_prepend>PATH=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020\windows\redist\intel64\compiler;</launch_app.environment_prepend>
+       <use_app_dir_as_work_dir type="bool">false</use_app_dir_as_work_dir>
+       <result_directory.path>C:\Users\jackm\Documents\project64\Source\Common\My Advisor Results - Common\r@@@{at}</result_directory.path>
+       <search_directories>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64\bin\Release64\lib\pdb</value>
+        </item>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64</value>
+        </item>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64\bin\Release64\pdb</value>
+        </item>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64\bin\Release\lib\pdb</value>
+        </item>
+        <item>
+         <value>sym=C:\Users\jackm\Documents\project64\bin\Release\pdb</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\bin\Release64\lib</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64</value>
+        </item>
+        <item>
+         <value>bin=C:/Users\jackm\Documents\project64\Source\Common\$(VC_ExecutablePath_x64)</value>
+        </item>
+        <item>
+         <value>bin=C:/Users\jackm\Documents\project64\Source\Common\$(WindowsSDK_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/Users\jackm\Documents\project64\Source\Common\$(VS_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:/Users\jackm\Documents\project64\Source\Common\$(MSBuild_ExecutablePath)</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Team Tools\Static Analysis Tools\FxCop</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.2.254\windows\mpi\intel64\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files (x86)\Common Files\Oracle\Java\javapath</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\system32</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\System32\Wbem</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\System32\WindowsPowerShell\v1.0</value>
+        </item>
+        <item>
+         <value>bin=C:\WINDOWS\System32\OpenSSH</value>
+        </item>
+        <item>
+         <value>bin=C:\ProgramData\chocolatey\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\PowerShell\7</value>
+        </item>
+        <item>
+         <value>bin=C:\Aldec\Active-HDL 10.1 64-bit\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Aldec\Active-HDL 9.1\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git\cmd</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\Git LFS</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\dotnet</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\Python\Python38\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\Python\Python38</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\Python\Python38-32\Scripts</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\Python\Python38-32</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Microsoft\WindowsApps</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Keybase</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\GitHubDesktop\bin</value>
+        </item>
+        <item>
+         <value>bin=C:\fahclient</value>
+        </item>
+        <item>
+         <value>bin=C:\Program Files\CMake\bin</value>
+        </item>
+        <item>
+         <value>bin=N:\perforce\server</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\AppData\Local\Programs\IPFS Desktop\resources\app.asar.unpacked\out\ipfs-on-path\scripts\bin-win</value>
+        </item>
+        <item>
+         <value>bin=C:\modeltech64_10.6d\win64</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\.dotnet\tools</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin64\RSP</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\bin\Release\lib</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin64\Input</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin\Input</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin\RSP</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin64\GFX</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\Plugin64\Audio</value>
+        </item>
+        <item>
+         <value>bin=C:\Users\jackm\Documents\project64\bin\Release64</value>
+        </item>
+       </search_directories>
+       <context>
+        <contextValue>
+         <id>auto_finalize</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>benchmarks-sync</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>cache_config</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>collectGpuOpenCl</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>collect_gpu_carm</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>cs_file</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>data_reuse_analysis</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>data_transfer_analysis</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>enable_cache_simulation</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>enable_grf_simulation</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>flops_and_masks</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>gpu_carm</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>gpu_profiling</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>loops</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>mark-up-list</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>modules_switch</id>
+         <value>knob.modules_switch.exclude</value>
+        </contextValue>
+        <contextValue>
+         <id>page_size</id>
+         <value>4096</value>
+        </contextValue>
+        <contextValue>
+         <id>process_for_analysis</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>profilePython</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>profile_jit</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>stackStitching</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>stacks</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>stl_profiling</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>tripcounts</value>
+        </contextValue>
+        <contextValue>
+         <id>track_heap_objects</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>track_stack_accesses</id>
+         <value type="bool">false</value>
+        </contextValue>
+        <contextValue>
+         <id>trip_counts</id>
+         <value type="bool">true</value>
+        </contextValue>
+       </context>
+      </workload>
+     </tripcounts>
+    </localhost>
+   </workloads>
+  </target_settings>
+ </All_Configurations-All_Platforms>
+</root>

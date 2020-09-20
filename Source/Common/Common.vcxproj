@@ -85,6 +85,12 @@
       <AdditionalIncludeDirectories>C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.2.254\windows\compiler\lib\intel64_win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <UseIntelOptimizedHeaders>true</UseIntelOptimizedHeaders>
       <EnableMatrixMultiplyLibraryCall>Yes</EnableMatrixMultiplyLibraryCall>
+      <EnableExpandedLineNumberInfo>true</EnableExpandedLineNumberInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <EnableExpandedLineNumberInfo>true</EnableExpandedLineNumberInfo>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

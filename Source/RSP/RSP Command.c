@@ -133,6 +133,7 @@ void Disable_RSP_Commands_Window ( void )
 
 int DisplayRSPCommand (DWORD location, int InsertPos)
 {
+#pragma ivdep
 	uint32_t OpCode;
 	DWORD LinesUsed = 1, status;
     Boolean Redraw = FALSE;

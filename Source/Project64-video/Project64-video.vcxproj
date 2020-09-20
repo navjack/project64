@@ -69,10 +69,15 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MaxSpeedHighLevel</Optimization>
       <UseIntelOptimizedHeaders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseIntelOptimizedHeaders>
       <EnableMatrixMultiplyLibraryCall Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Yes</EnableMatrixMultiplyLibraryCall>
+      <EnableExpandedLineNumberInfo Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableExpandedLineNumberInfo>
+      <EnableExpandedLineNumberInfo Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableExpandedLineNumberInfo>
     </ClCompile>
     <PreBuildEvent>
       <Command>"$(SolutionDir)Source\Script\UpdateVersion.cmd" "$(Configuration)" "$(Platform)" "$(SolutionDir)Source\Project64-video\Version.h.in" "$(SolutionDir)Source\Project64-video\Version.h"</Command>
     </PreBuildEvent>
+    <Link>
+      <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DebugFull</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="F3DTEXA.h" />

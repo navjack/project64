@@ -60,6 +60,8 @@
       <RecognizeRestrictKeyword Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</RecognizeRestrictKeyword>
       <EnableAnsiAliasing Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableAnsiAliasing>
       <EnableMatrixMultiplyLibraryCall Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Yes</EnableMatrixMultiplyLibraryCall>
+      <EnableExpandedLineNumberInfo Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableExpandedLineNumberInfo>
+      <EnableExpandedLineNumberInfo Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableExpandedLineNumberInfo>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

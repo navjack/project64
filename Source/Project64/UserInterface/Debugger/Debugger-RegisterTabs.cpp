@@ -817,11 +817,13 @@ void CRegisterTabs::InitRegisterEdits64(CWindow& tab, CEditReg64* edits, const T
 
 void CRegisterTabs::ZeroRegisterEdit(CEditNumber32& edit)
 {
+#pragma forceinline recursive
     edit.SetValue(0, DisplayMode::ZeroExtend);
 }
 
 void CRegisterTabs::ZeroRegisterEdits(CEditNumber32* edits, uint32_t ctrlIdsCount)
 {
+#pragma loop count min(256)
     for (int i = 0, n = ctrlIdsCount; i < n; i++)
     {
         ZeroRegisterEdit(edits[i]);
@@ -835,6 +837,7 @@ void CRegisterTabs::ZeroRegisterEdit64(CEditReg64& edit)
 
 void CRegisterTabs::ZeroRegisterEdits64(CEditReg64* edits, uint32_t ctrlIdsCount)
 {
+#pragma loop count min(256)
     for (uint32_t i = 0, n = ctrlIdsCount; i < n; i++)
     {
         ZeroRegisterEdit64(edits[i]);
@@ -1063,5 +1066,6 @@ void CEditReg64::SetValue(uint64_t value)
 {
     uint32_t h = (value & 0xFFFFFFFF00000000LL) >> 32;
     uint32_t l = (value & 0x00000000FFFFFFFFLL);
+#pragma forceinline recursive
     SetValue(h, l);
 }

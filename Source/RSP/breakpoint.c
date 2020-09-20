@@ -141,8 +141,11 @@ void RefreshBpoints ( void * hList )
 	LRESULT location;
 	int count;
 
+#pragma loop count min(512)
 	for (count = 0; count < NoOfBpoints; count ++ ) {
+#pragma forceinline recursive
 		sprintf(Message," at 0x%03X (RSP)", BPoint[count].Location);
+#pragma forceinline recursive
 		location = SendMessage(hList, LB_ADDSTRING, 0, (LPARAM)Message);
 		SendMessage(
 			hList,

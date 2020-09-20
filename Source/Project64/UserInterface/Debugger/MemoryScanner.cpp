@@ -276,6 +276,8 @@ int CScanResult::GetMemoryValueString(char* buffer, size_t size, bool bIgnoreHex
         }
         else
         {
+#pragma parallel
+#pragma loop count min(512)
             for (int i = 0; i < m_StrLength; i++)
             {
                 uint32_t ipaddr = (paddr + i) ^ 3;
@@ -385,6 +387,8 @@ bool CScanResult::SetMemoryValueFromString(const char* str)
             char* buff = new char[size];
             CMemoryScanner::ParseHexString(buff, str);
 
+#pragma parallel
+#pragma loop count min(1024)
             for (int i = 0; i < m_StrLength; i++)
             {
                 uint32_t ipaddr = (paddr + i) ^ 3;
@@ -395,6 +399,8 @@ bool CScanResult::SetMemoryValueFromString(const char* str)
         }
         else
         {
+#pragma parallel
+#pragma loop count min(1024)
             for (int i = 0; i < m_StrLength; i++)
             {
                 uint32_t ipaddr = (paddr + i) ^ 3;
