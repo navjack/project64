@@ -28,4 +28,3 @@
 #include "UserInterface/SettingsConfig.h"
 #include "UserInterface/EnhancementConfig.h"
 #include "UserInterface/CheatClassUI.h"
-#include "UserInterface/SupportWindow.h"

@@ -99,6 +99,7 @@ void CMipsMemoryVM::Reset(bool /*EraseMemory*/)
             size_t Len = g_Settings->LoadDword(Rdb_TLB_VAddrLen);   //0x01000000;
             size_t PAddr = g_Settings->LoadDword(Rdb_TLB_PAddrStart); //0x10034b30;
             size_t End = Start + Len;
+#pragma loop count min(128)
             for (address = Start; address < End; address += 0x1000)
             {
                 m_TLB_ReadMap[address >> 12] = ((size_t)m_RDRAM + (address - Start + PAddr)) - address;
@@ -1012,6 +1013,7 @@ void CMipsMemoryVM::TLB_Unmaped(uint32_t Vaddr, uint32_t Len)
     size_t count, End;
 
     End = Vaddr + Len;
+#pragma loop count min(512)
     for (count = Vaddr; count < End; count += 0x1000)
     {
         size_t Index = count >> 12;

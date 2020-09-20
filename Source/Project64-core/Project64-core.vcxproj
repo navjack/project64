@@ -21,9 +21,23 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{00C7B43A-DED7-4DF0-B072-9A5783EF866D}</ProjectGuid>
     <RootNamespace>Project64core</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ImportGroup Label="PropertySheets">
@@ -35,6 +49,23 @@
     <PreBuildEvent>
       <Command>"$(SolutionDir)Source\Script\UpdateVersion.cmd" "$(Configuration)" "$(Platform)" "$(SolutionDir)Source\Project64-core\Version.h.in" "$(SolutionDir)Source\Project64-core\Version.h"</Command>
     </PreBuildEvent>
+    <ClCompile />
+    <ClCompile>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <ClCompile>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotSet</EnableEnhancedInstructionSet>
+      <Parallelization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</Parallelization>
+      <GenerateAlternateCodePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ICELAKE</GenerateAlternateCodePaths>
+      <UseProcessorExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">COFFEELAKE</UseProcessorExtensions>
+      <RecognizeRestrictKeyword Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</RecognizeRestrictKeyword>
+      <EnableAnsiAliasing Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableAnsiAliasing>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MaxSpeedHighLevel</Optimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.2.254\windows\compiler\lib\intel64_win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UseIntelOptimizedHeaders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseIntelOptimizedHeaders>
+      <EnableMatrixMultiplyLibraryCall Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Yes</EnableMatrixMultiplyLibraryCall>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="3rdParty\7zip.cpp">

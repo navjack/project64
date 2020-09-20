@@ -22,7 +22,6 @@ int WINAPI WinMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, LPSTR /
         g_Debugger = &Debugger;
         g_Plugins->SetRenderWindows(&MainWindow, &HiddenWindow);
         Notify().SetMainWindow(&MainWindow);
-        CSupportWindow SupportWindow;
         bool isROMLoaded = false;
 
         if (g_Settings->LoadStringVal(Cmd_RomFile).length() > 0 && g_Settings->LoadStringVal(Cmd_ComboDiskFile).length() > 0)
@@ -67,7 +66,6 @@ int WINAPI WinMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, LPSTR /
         //Handle Main Window if ROM is not loaded and running
         if (!isROMLoaded)
         {
-            SupportWindow.Show(reinterpret_cast<HWND>(MainWindow.GetWindowHandle()));
             if (UISettingsLoadBool(RomBrowser_Enabled))
             {
                 WriteTrace(TraceUserInterface, TraceDebug, "Show Rom Browser");

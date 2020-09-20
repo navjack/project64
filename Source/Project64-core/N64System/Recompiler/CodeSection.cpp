@@ -946,6 +946,7 @@ void CCodeSection::SwitchParent(CCodeSection * OldParent, CCodeSection * NewPare
 
 void CCodeSection::TestRegConstantStates(CRegInfo & Base, CRegInfo & Reg)
 {
+#pragma ivdep
     for (int i = 0; i < 32; i++)
     {
         if (Reg.GetMipsRegState(i) != Base.GetMipsRegState(i))

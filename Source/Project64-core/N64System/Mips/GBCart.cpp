@@ -306,6 +306,7 @@ static void read_gb_cart_mbc3(struct gb_cart* gb_cart, uint16_t address, uint8_t
             {
                 if (gb_cart->rtc_latch)
                 {
+#pragma ivdep
                     for (int i = 0; i < 32; i++)
                     {
                         data[i] = gb_cart->rtc_latch_data[gb_cart->ram_bank - 0x08];
@@ -314,6 +315,7 @@ static void read_gb_cart_mbc3(struct gb_cart* gb_cart, uint16_t address, uint8_t
                 else
                 {
                     memoryUpdateMBC3Clock(gb_cart);
+#pragma ivdep
                     for (int i = 0; i < 32; i++)
                     {
                         data[i] = gb_cart->rtc_data[gb_cart->ram_bank - 0x08];

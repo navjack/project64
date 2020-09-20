@@ -21,9 +21,23 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7E534C8E-1ACE-4A88-8807-39A11ED4DA18}</ProjectGuid>
     <RootNamespace>Project64</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+    <SpectreMitigation>false</SpectreMitigation>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ImportGroup Label="PropertySheets">
@@ -42,10 +56,39 @@
       <StackReserveSize>1</StackReserveSize>
       <DataExecutionPrevention>false</DataExecutionPrevention>
       <LargeAddressAware>true</LargeAddressAware>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.2.254\windows\compiler\lib\intel64_win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Manifest Condition="'$(PlatformToolset)'!='v90'">
       <EnableDPIAwareness>true</EnableDPIAwareness>
     </Manifest>
+    <ClCompile>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+    </ClCompile>
+    <ClCompile>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <ClCompile>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ClCompile>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MaxSpeedHighLevel</Optimization>
+    </ClCompile>
+    <ClCompile>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <ClCompile>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotSet</EnableEnhancedInstructionSet>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.2.254\windows\compiler\lib\intel64_win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Parallelization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</Parallelization>
+      <UseIntelOptimizedHeaders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseIntelOptimizedHeaders>
+      <GenerateAlternateCodePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ICELAKE</GenerateAlternateCodePaths>
+      <UseProcessorExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">COFFEELAKE</UseProcessorExtensions>
+      <RecognizeRestrictKeyword Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</RecognizeRestrictKeyword>
+      <EnableAnsiAliasing Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableAnsiAliasing>
+      <EnableMatrixMultiplyLibraryCall Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Yes</EnableMatrixMultiplyLibraryCall>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="UserInterface\Debugger\CPULog.cpp" />
@@ -107,8 +150,6 @@
     <ClCompile Include="UserInterface\Settings\SettingsPage-Options.cpp" />
     <ClCompile Include="UserInterface\Settings\SettingsPage-Plugin.cpp" />
     <ClCompile Include="UserInterface\Settings\SettingsPage.cpp" />
-    <ClCompile Include="UserInterface\SupportEnterCode.cpp" />
-    <ClCompile Include="UserInterface\SupportWindow.cpp" />
     <ClCompile Include="UserInterface\WelcomeScreen.cpp" />
     <ClCompile Include="UserInterface\WTLControls\EditNumber32.cpp" />
     <ClCompile Include="UserInterface\WTLControls\GetCWindowText.cpp" />
@@ -183,8 +224,6 @@
     <ClInclude Include="UserInterface\Settings\SettingsPage-Options.h" />
     <ClInclude Include="UserInterface\Settings\SettingsPage-Plugin.h" />
     <ClInclude Include="UserInterface\Settings\SettingsPage.h" />
-    <ClInclude Include="UserInterface\SupportEnterCode.h" />
-    <ClInclude Include="UserInterface\SupportWindow.h" />
     <ClInclude Include="UserInterface\WelcomeScreen.h" />
     <ClInclude Include="UserInterface\WTLControls\DisplayMode.h" />
     <ClInclude Include="UserInterface\WTLControls\EditNumber32.h" />

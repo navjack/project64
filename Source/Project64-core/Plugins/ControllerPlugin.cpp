@@ -173,6 +173,7 @@ void CControl_Plugin::SetControl(CControl_Plugin const * const Plugin)
         }
     }
     m_AllocatedControllers = false;
+#pragma ivdep
     for (int32_t count = 0; count < sizeof(m_Controllers) / sizeof(m_Controllers[0]); count++)
     {
         m_Controllers[count] = Plugin->m_Controllers[count];

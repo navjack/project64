@@ -639,6 +639,7 @@ void CRomList::ByteSwapRomData(uint8_t * Data, int32_t DataLen)
     case 0x07408027: //64DD IPL
     case 0xD316E848: //64DD JP Disk
     case 0xEE562263: //64DD US Disk
+#pragma loop count min(128)
         for (count = 0; count < DataLen; count += 4)
         {
             Data[count] ^= Data[count + 2];
@@ -654,6 +655,7 @@ void CRomList::ByteSwapRomData(uint8_t * Data, int32_t DataLen)
     case 0x56EE6322: //64DD US Disk
     case 0x40123780:
     case 0x00000000: //64DD DEV Disk
+#pragma loop count min(128)
         for (count = 0; count < DataLen; count += 4)
         {
             Data[count] ^= Data[count + 3];

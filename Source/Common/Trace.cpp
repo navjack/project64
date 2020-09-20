@@ -82,6 +82,7 @@ void TraceSetMaxModule(uint32_t MaxModule, uint8_t DefaultSeverity)
         g_ModuleLogLevel = NULL;
     }
     g_ModuleLogLevel = new uint32_t[MaxModule];
+#pragma loop count min(1024)
     for (uint32_t i = 0; i < MaxModule; i++)
     {
         g_ModuleLogLevel[i] = DefaultSeverity;

@@ -382,6 +382,8 @@ void MD5::encode(uint1 *output, uint4 *input, uint4 len)
 {
     unsigned int i, j;
 
+#pragma ivdep
+#pragma loop count min(128)
     for (i = 0, j = 0; j < len; i++, j += 4)
     {
         output[j] = (uint1)(input[i] & 0xff);
@@ -397,6 +399,8 @@ void MD5::decode(uint4 *output, uint1 *input, uint4 len)
 {
     unsigned int i, j;
 
+#pragma parallel
+#pragma loop count min(128)
     for (i = 0, j = 0; j < len; i++, j += 4)
     {
         output[i] = ((uint4)input[j]) | (((uint4)input[j + 1]) << 8) | (((uint4)input[j + 2]) << 16) | (((uint4)input[j + 3]) << 24);
@@ -408,6 +412,7 @@ void MD5::memcpy(uint1 *output, uint1 *input, uint4 len)
 {
     unsigned int i;
 
+#pragma loop count min(512)
     for (i = 0; i < len; i++)
     {
         output[i] = input[i];
@@ -419,6 +424,7 @@ void MD5::memset(uint1 *output, uint1 value, uint4 len)
 {
     unsigned int i;
 
+#pragma loop count min(1024)
     for (i = 0; i < len; i++)
     {
         output[i] = value;

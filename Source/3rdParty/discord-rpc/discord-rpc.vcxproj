@@ -21,9 +21,22 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DCC841B2-298A-40F0-84D1-ACBABD3B86E8}</ProjectGuid>
     <RootNamespace>discord-rpc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>Intel C++ Compiler 19.1</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ImportGroup Label="PropertySheets">
@@ -37,7 +50,18 @@
       <WarningLevel>Level4</WarningLevel>
       <DisableSpecificWarnings>
       </DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>.\;.\include;$(SolutionDir)\Source;$(SolutionDir)\Source\3rdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;.\include;$(SolutionDir)\Source;$(SolutionDir)\Source\3rdParty;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.2.254\windows\compiler\lib\intel64_win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MaxSpeedHighLevel</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotSet</EnableEnhancedInstructionSet>
+      <Parallelization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</Parallelization>
+      <UseIntelOptimizedHeaders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseIntelOptimizedHeaders>
+      <GenerateAlternateCodePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ICELAKE</GenerateAlternateCodePaths>
+      <UseProcessorExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">COFFEELAKE</UseProcessorExtensions>
+      <RecognizeRestrictKeyword Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</RecognizeRestrictKeyword>
+      <EnableAnsiAliasing Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableAnsiAliasing>
+      <EnableMatrixMultiplyLibraryCall Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Yes</EnableMatrixMultiplyLibraryCall>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

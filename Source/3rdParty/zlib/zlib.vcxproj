@@ -21,9 +21,22 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{731BD205-2826-4631-B7AF-117658E88DBC}</ProjectGuid>
     <RootNamespace>zlib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ImportGroup Label="PropertySheets">
@@ -36,7 +49,6 @@
       <PrecompiledHeader />
       <WarningLevel>Level4</WarningLevel>
       <DisableSpecificWarnings>4100;4127;4131;4189;4244;4701;4703;4996</DisableSpecificWarnings>
-
       <!-- Fix for later VC versions on XP: 45KB + 436 -->
       <PreprocessorDefinitions>Z_BUFSIZE=46516;$(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
